@@ -27,6 +27,7 @@ function BlackTheme() {
     var BlackTheme = document.getElementById("black-theme")
     var Off_BlackTheme = document.getElementById("Off-BlackTheme")
     var CHT = document.getElementById("container-header-text");
+    var btn_more = document.getElementById("button-more")
 
     var elements = document.getElementsByTagName('*');
     for (var i = 0; i < elements.length; i++) {
@@ -43,6 +44,7 @@ function Off_BlackTheme() {
     var BlackTheme = document.getElementById("black-theme")
     var Off_BlackTheme = document.getElementById("Off-BlackTheme")
     var CHT = document.getElementById("container-header-text");
+    var btn_more = document.getElementById("button-more")
 
     var elements = document.getElementsByTagName('*');
     for (var i = 0; i < elements.length; i++) {
@@ -52,6 +54,7 @@ function Off_BlackTheme() {
         BlackTheme.style.display = '';
         Off_BlackTheme.style.display = '';
         CHT.style.borderRadius = '';
+        btn_more.style.border = ''
 
     }
 }

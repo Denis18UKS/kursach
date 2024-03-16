@@ -29,7 +29,7 @@
             ?>
 
             <li><a href="map.php">Карта</a></li>
-            <li><a href="#">Тарифы</a></li>
+            <li><a href="#tarifs">Тарифы</a></li>
             
             <!-- Выпадающий список -->
             <div class="dropdown">

@@ -37,7 +37,7 @@
                         $query = mysqli_query($connect, $sql);
 
                         if ($query) {
-                            echo "<script>alert('Пользователь успешно добавлен'); location.href = '/';</script>";
+                            echo "<script>alert('Вы успешно прошли регистрацию'); location.href = 'signIn.php';</script>";
                         } else {
                             echo "<script>alert('Ошибка при добавлении пользователя'); location.href = '/';</script>";
 

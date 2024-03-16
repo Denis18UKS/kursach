@@ -47,24 +47,73 @@
     <h1 class="tarifs">Тарифы</h1>
 
     <section id="tarifs">
+        <?php
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "Taxi";
 
-        <div id="tarif-card">
-            <div id="tarif-img-text">
-                <img src="/image/детский.png" alt="">
-            </div>
+            $connect = new mysqli($servername, $username, $password, $dbname);
 
-            <div id="tarif-card-text">
-                <h2>Тариф детский - это</h2>
-                <p>удобство, безопасность и комфорт для самых маленьких пассажиров. С нами ваш ребенок будет под надежной защитой, а поездка пройдет в приятной и уютной атмосфере.</p>
-            </div>
-        </div>
+            if ($connect->connect_error) {
+                die("Ошибка подключения: " . $connect->connect_error);
+            }
 
-        <div id="tarif"></div>
-        <div id="tarif"></div>
+            $sql = "SELECT * FROM tarifs";
+            $result = $connect->query($sql);
+
+            if ($result === false) {
+                die("Ошибка выполнения запроса: " . $connect->error);
+            }
+
+            if (isset($_GET['tarif_id'])) {
+                $selected_tarif_id = $_GET['tarif_id'];
+            }
+            
+
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {
+                    echo "<div id='tarif-card' style='width: 20rem;'>";
+                    echo "<img src='../image/tarifs/" . $row['picture_tarif'] . "' class='card-img-top' alt=''>";
+                    echo "<div class='card-body'>";
+                    echo "<h1 class='card-title'>" . $row['tittle_tarif'] . "</h1>";        
+                    echo "<p class='card-text-description' style='display: none;' id='description-" . $row['id'] . "'>" . $row['description_tarif'] . "</p>";
+                    echo "<div class='price-and-btn-content'>";
+                    echo "<h5>Цена: " . $row['price_tarif'] . "₽" . "</h5>";
+                    echo "<button onclick='displayMore(" . $row['id'] . ")' class='btn btn-primary' id='button-more-" . $row['id'] . "'>Читать подробнее</button>";
+                    echo "</div>";
+                    echo "</div>";
+                    echo "</div>";
+                }
+            } else {
+                echo "0 результатов";
+            }
+
+            $connect->close();
+        ?>
     </section>
+
+    <script>
+        function displayMore(tarifId) {
+            var descriptionElement = document.getElementById("description-" + tarifId);
+            var buttonElement = document.getElementById("button-more-" + tarifId);
+
+            if (descriptionElement.style.display === "none") {
+                descriptionElement.style.display = "block";
+                buttonElement.textContent = "Скрыть";
+            } else {
+                descriptionElement.style.display = "none";
+                buttonElement.textContent = "Читать подробнее";
+            }
+        }
+    </script>
+
 </main>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+<script>
+</script>
