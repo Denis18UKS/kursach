@@ -1,0 +1,167 @@
+body{
+    height: 5000px;
+    transition: all 0.6s ease-in-out;
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -ms-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+}
+
+/* nav.css */
+
+header{
+    transition: all 0.6s ease-in-out 0s;
+    box-shadow: gold 0px 0px 5px 20px inset;
+    background-image: url(/image/taxi.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    color: white;
+    font-weight: 900;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    -webkit-transition: all 0.6s ease-in-out 0s;
+    -moz-transition: all 0.6s ease-in-out 0s;
+    -ms-transition: all 0.6s ease-in-out 0s;
+    -o-transition: all 0.6s ease-in-out 0s;
+}
+
+#container-header-text{
+    background-color: rgba(255, 217, 0, 0.315);
+    border-radius: 100px;
+    border: 5px solid goldenrod;
+    width: 50%;
+    text-align: center;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: gold;
+    height: 100%;
+    gap: 50px;
+}
+
+#info-block{
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#info-block img{
+    box-shadow: 0px 0px 10px 7px goldenrod;
+    border-bottom: 5px solid gold;
+    border-radius: 340px;
+}
+
+
+#info-text{
+    font-size: x-large;
+    font-family: cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+#info-text h1{
+    margin: 0% auto;
+    font-weight: 900;
+}
+
+#info-text h2{
+    margin: 0% auto;
+}
+
+#info-text p{
+    margin: 0% auto;
+    width: 75%;
+}
+
+
+#tarifs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.tarifs{
+    margin: 0% auto;
+    font-weight: 900;
+    font-family: cursive;
+}
+
+#tarif-card{
+    display: flex;
+    width: 20rem;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+#tarif-card h1, p{
+    margin: 0%;
+}
+
+.card-img-top{
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px 10px goldenrod;
+    padding: 5px;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: larger;
+    align-items: center;
+}
+
+.card-text-info{
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0% auto;
+}
+
+.price-and-btn-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 5px;
+}
+
+
+#price-and-btn-content h5{
+    margin: 0%;
+    font-weight: 800;
+}
+
+.btn-primary{
+    background: #000;
+    padding: 5px 15px;
+    border-radius: 50px;
+    margin-top: 1%;
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+    border: none;
+    transition: all 0.6s ease-in-out;
+}
+
+
+
+
