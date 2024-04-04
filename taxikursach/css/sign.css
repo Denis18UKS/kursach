@@ -53,6 +53,15 @@ form{
     gap: 15px;
 }
 
+#driver-fields{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    gap: 15px;
+}
+
+
 #form-content label, input{
     font-size: x-large;
     color: black;

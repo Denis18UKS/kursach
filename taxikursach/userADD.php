@@ -22,11 +22,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $check_query = mysqli_query($connect, $check_sql);
 
     if (mysqli_num_rows($check_query) > 0) {
-        echo "<script>alert('Пользователь с таким email уже существует'); location.href = 'reg.php';</script>";
+        echo "<script>alert('Пользователь с таким номером телефона уже существует'); location.href = 'reg.php';</script>";
     } else {
         // Добавление пользователя в базу данных
         if ($user_type == "users") {
-            $sql = "INSERT INTO users (surname, name, password, phone, address) VALUES ('$surname', '$name', '$password', '$phone', '$address')";
+            $sql = "INSERT INTO users (surname, name, password, phone, address, status) VALUES ('$surname', '$name', '$password', '$phone', '$address', 'Активен')";
         } else if ($user_type == "admin") {
             $sql = "INSERT INTO admin (admin_login, admin_password, admin_email) VALUES ('$admin_login', '$admin_password', '$email')";
         }

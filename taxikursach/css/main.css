@@ -1,5 +1,6 @@
+
+
 body{
-    height: 5000px;
     transition: all 0.6s ease-in-out;
     -webkit-transition: all 0.6s ease-in-out;
     -moz-transition: all 0.6s ease-in-out;
@@ -30,15 +31,17 @@ header{
 }
 
 #container-header-text{
-    background-color: rgba(255, 217, 0, 0.315);
-    border-radius: 100px;
+    background-color:   gold;
+    box-shadow: inset 0px 0px 10px 8px goldenrod;
     border: 5px solid goldenrod;
     width: 50%;
+    padding: 1%;
     text-align: center;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    -ms-border-radius: 100px;
-    -o-border-radius: 100px;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
 }
 
 main{
@@ -87,12 +90,33 @@ main{
     width: 75%;
 }
 
-
-#tarifs{
+#tarifs-contents{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 50px;
+    max-width: 1100px; /* Любое подходящее значение для вашего дизайна */
+    overflow-y: auto; /* Добавление прокрутки при необходимости через колёсико мышки */; /* Добавление прокрутки при необходимости */
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#tarifs{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 20px;
+}
+
+.tarifs-container {
+    max-height: 800px; /* Установим максимальную высоту области, чтобы вмещались все карточки */
+    overflow-y: auto; /* Добавим вертикальную прокрутку при необходимости */
+    display: flex;
+    flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку */
+    gap: 10px; /* Управляет промежутками между элементами */
 }
 
 .tarifs{
@@ -103,6 +127,7 @@ main{
 
 #tarif-card{
     display: flex;
+    flex-direction: column;
     width: 20rem;
     align-items: center;
     justify-content: center;
@@ -114,6 +139,7 @@ main{
 }
 
 .card-img-top{
+    height: 220px;
     border-radius: 50px;
     box-shadow: 0px 0px 10px 10px goldenrod;
     padding: 5px;
@@ -162,6 +188,27 @@ main{
     transition: all 0.6s ease-in-out;
 }
 
+#video{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 100px;
 
+}
 
+#video h1 {
+    margin: 0% auto;
+}
 
+footer{
+    box-shadow: 0px 0px 10px 1px goldenrod;
+    padding: 1%;
+    background-color: goldenrod;
+}
+
+#ftr-contents{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

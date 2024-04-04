@@ -17,7 +17,7 @@ $description = $_POST["description"];
 $price = $_POST["price"];
 
 // Вставка данных в базу данных
-$sql = "INSERT INTO tarifs (picture_tarif, title_tarif, description_tarif, price_tarif) VALUES ('$target_file', '$title', '$description', '$price')";
+$sql = "INSERT INTO tarifs (picture_tarif, title_tarif, description_tarif, price_tarif, status_tarif) VALUES ('$target_file', '$title', '$description', '$price', 'активен')";
 
 if ($connect->query($sql) === TRUE) {
     // Успешно добавлено

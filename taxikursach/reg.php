@@ -10,15 +10,19 @@
                 <title>Регистрация</title>
                 <meta name='viewport' content='width=device-width, initial-scale=1'>
                 <link rel='stylesheet' type='text/css' media='screen' href='css/reg.css'>
-                <link rel='stylesheet' type='text/css' media='screen' href='css/teacher.css'>
+                <link rel='stylesheet' type='text/css' media='screen' href='css/taxi.css'>
                 <link rel='stylesheet' type='text/css' media='screen' href='css/back.css'>
-                <link rel='stylesheet' type='text/css' media='screen' href='fonts/font.css'>
+
                 <script src="js/blur.js" defer></script>
+                <script src='js/black-theme.js' defer></script>
 
             </head>
             <body>
             
-            <a href="/"><img src="image/home.svg" alt="back" title="Главная" id="back"></a>
+            <a href="/"><img src="image/home-black.png" alt="back" title="Главная" id="back"></a>
+
+            <? include "taxi-squares.html"?>
+
 
             <div id="registration">
                 <h1>Регистрация</h1>

@@ -7,12 +7,14 @@
     <link rel='stylesheet' type='text/css' media='screen' href='css/taxi.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/back.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='fonts/font.css'>
+    <script src='js/black-theme.js' defer></script>
+
 
 </head>
 <body>
     <?php include "taxi-squares.html"?>
-        <a href="/"><img src="image/home.svg
-" alt="back" title="Главная" id="back"></a>
+
+        <a href="/"><img src="image/home-black.png" alt="back" title="Главная" id="back"></a>
 
     <div id="content">
         <h1>Карта в Реальном Времени</h1>

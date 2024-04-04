@@ -7,11 +7,15 @@
     <link rel="stylesheet" href="../css/admin.css">
     <script src="/js/admin_panel.js" defer></script>
     <script src="/js/save-choose.js" defer></script>
+
+    <script src='/js/black-theme.js' defer></script>
+
 </head>
 <body>
     <div class="sidebar">
         <a href="admin.php" id="add-met-link">Управление тарифами</a>
         <a href="control-users.php" id="add-programs-link">Управление пользователями</a>
+        <a href="control-drivers.php" id="add-drivers-link">Управление водителями</a>
         <a href="../" id="logout-link">На главную</a>
     </div>
 
@@ -44,31 +48,55 @@
                 <th>Название</th>
                 <th>Описание</th>
                 <th>Стоимость</th>
+                <th>Статус</th>
+                <th>Действие</th>
                 <th>Действие</th>
             </tr>
             <?php
-            include("../connectDB.php");
+                include("../connectDB.php");
 
-            $tariff_control = "SELECT * FROM `tarifs`";
-            $tariff_result = mysqli_query($connect, $tariff_control);
+                $tariff_control = "SELECT * FROM `tarifs`";
+                $tariff_result = mysqli_query($connect, $tariff_control);
 
-            if (mysqli_num_rows($tariff_result) > 0) {
-                while ($tariff = mysqli_fetch_assoc($tariff_result)) {
-                    echo "<tr>";
-                    echo "<td>" . $tariff['id'] . "</td>";
-                    echo "<td>" . $tariff['title_tarif'] . "</td>";
-                    echo "<td>" . $tariff['description_tarif'] . "</td>";
-                    echo "<td>" . $tariff['price_tarif'] . "₽" . "</td>";
-                    echo "<td><a href='remove-tarif.php?id=" . $tariff['id'] . "' class='remove'>Удалить</a></td>";
-                    echo "</tr>";
+                if (mysqli_num_rows($tariff_result) > 0) {
+                    while ($tariff = mysqli_fetch_assoc($tariff_result)) {
+                        echo "<tr>";
+                        echo "<td>" . $tariff['id'] . "</td>";
+                        echo "<td>" . $tariff['title_tarif'] . "</td>";
+                        echo "<td>" . $tariff['description_tarif'] . "</td>";
+                        echo "<td>" . $tariff['price_tarif'] . "₽" . "</td>";
+                        echo "<td>" . $tariff['status_tarif'] . "</td>";
+                        if ($tariff['status_tarif'] == 'активен') {
+                            echo "<td><a href='change-status-tarif.php?id=" . $tariff['id'] . "&status=активен' onclick='confirmRemove()' class='remove'>Удалить</a></td>";
+                        } else {
+                            echo "<td><a href='change-status-tarif.php?id=" . $tariff['id'] . "&status=неактивен' onclick='confirmRestore() class='restore'>Восстановить</a></td>";
+                        } ?>
+
+                        <td><a href='delete-tarif.php?id=<?php echo $tariff['id']; ?>' onclick='return confirmDelete()' class='delete'>Уничтожить</a></td>
+
+                        <?php echo "</tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='5'>Нет тарифов для отображения.</td></tr>";
                 }
-            } else {
-                echo "<tr><td colspan='5'>Нет тарифов для отображения.</td></tr>";
-            }
             ?>
         </table>
     </section>
     </div>
+
+    <script>
+        function confirmRemove(){
+            return confirm ("Вы уверена что хотите удалить тариф?");
+        }
+
+        function confirmRestore(){
+            return confirm ("Вы уверена что хотите восстановить тариф?");
+        }
+
+        function confirmDelete(){
+            return confirm ("Вы уверены что точно хотите удалить тариф навсегда без возможности восстановления?");
+        }
+    </script>
 
 </body>
 </html>

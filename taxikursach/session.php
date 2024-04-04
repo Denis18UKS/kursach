@@ -5,6 +5,9 @@
         // Проверяем, является ли пользователь учителем
         if ($_SESSION['user_type'] === "admin") {
             $userType = "admin";
+        } else if ($_SESSION['user_type'] === "driver"){
+            $userType = "driver";
+            header("Location: drivers/driver.php?type=$userType");
         } else {
             $userType = "user";
         }

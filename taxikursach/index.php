@@ -10,7 +10,8 @@
     <link rel='stylesheet' type='text/css' media='screen' href='css/taxi.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/nav.css'>
 
-    <script src='main.js'></script>
+    <script src='js/main.js' defer></script>
+    <script src='js/black-theme.js' defer></script>
 </head>
 <body>
 
@@ -44,21 +45,12 @@
         </div>
     </section>
     
-    <section id="tarifs">
-
+<section id="tarifs-contents">
     <h1 class="tarifs">Тарифы</h1>
+        <section id="tarifs" class="tarifs-container">
 
         <?php
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "Taxi-kursach";
-
-            $connect = new mysqli($servername, $username, $password, $dbname);
-
-            if ($connect->connect_error) {
-                die("Ошибка подключения: " . $connect->connect_error);
-            }
+            include "connectDB.php";
 
             $sql = "SELECT * FROM tarifs";
             $result = $connect->query($sql);
@@ -67,24 +59,21 @@
                 die("Ошибка выполнения запроса: " . $connect->error);
             }
 
-            if (isset($_GET['tarif_id'])) {
-                $selected_tarif_id = $_GET['tarif_id'];
-            }
-            
-
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
-                    echo "<div id='tarif-card' style='width: 20rem;'>";
-                    echo "<img src='../tarifs/" . $row['picture_tarif'] . "' class='card-img-top' alt=''>";
-                    echo "<div class='card-body'>";
-                    echo "<h1 class='card-title'>" . $row['title_tarif'] . "</h1>";        
-                    echo "<p class='card-text-description' style='display: none;' id='description-" . $row['id'] . "'>" . $row['description_tarif'] . "</p>";
-                    echo "<div class='price-and-btn-content'>";
-                    echo "<h5>Цена: " . $row['price_tarif'] . "₽" . "</h5>";
-                    echo "<button onclick='displayMore(" . $row['id'] . ")' class='btn btn-primary' id='button-more-" . $row['id'] . "'>Читать подробнее</button>";
-                    echo "</div>";
-                    echo "</div>";
-                    echo "</div>";
+                    if ($row['status_tarif'] == 'активен') {
+                        echo "<div id='tarif-card' style='width: 20rem;'>";
+                        echo "<img src='../tarifs/" . $row['picture_tarif'] . "' class='card-img-top' alt=''>";
+                        echo "<div class='card-body'>";
+                        echo "<h1 class='card-title'>" . $row['title_tarif'] . "</h1>";        
+                        echo "<p class='card-text-description' style='display: none;' id='description-" . $row['id'] . "'>" . $row['description_tarif'] . "</p>";
+                        echo "<div class='price-and-btn-content'>";
+                        echo "<h5>Цена: от " . $row['price_tarif'] . "₽</h5>";
+                        echo "<button onclick='displayMore(" . $row['id'] . ")' class='btn btn-primary' id='button-more-" . $row['id'] . "'>Читать подробнее</button>";
+                        echo "</div>";
+                        echo "</div>";
+                        echo "</div>";
+                    }
                 }
             } else {
                 echo "0 результатов";
@@ -92,28 +81,28 @@
 
             $connect->close();
         ?>
-    </section>
+        </section>
+</section>
 
-    <script>
-        function displayMore(tarifId) {
-            var descriptionElement = document.getElementById("description-" + tarifId);
-            var buttonElement = document.getElementById("button-more-" + tarifId);
+<section id="video">
+    <h1>Видео с ночной поездки</h1>
+        <div id="content-video">
+            <?php include "video.php" ?>
+        </div>
+</section>
 
-            if (descriptionElement.style.display === "none") {
-                descriptionElement.style.display = "block";
-                buttonElement.textContent = "Скрыть";
-            } else {
-                descriptionElement.style.display = "none";
-                buttonElement.textContent = "Читать подробнее";
-            }
-        }
-    </script>
 
+    <script src="js/displaymore.js" defer></script>
 </main>
 
+    <footer>
+        <div id="ftr-contents">
+            <div id="copyright">&copy Карпов Денис TAXI-Курсовой проект 21-Веб-1</div>
+        </div>
+    </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
 </html>
 
 <script>

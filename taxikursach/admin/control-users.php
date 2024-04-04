@@ -7,16 +7,19 @@
     <link rel="stylesheet" href="../css/admin.css">
     <script src="/js/admin_panel.js" defer></script>
     <script src="/js/save-choose.js" defer></script>
+    <script src='/js/black-theme.js' defer></script>
+
 </head>
 <body>
     <div class="sidebar">
         <a href="admin.php" id="add-met-link">Управление тарифами</a>
-        <a href="#" id="add-programs-link">Управление программами</a>
+        <a href="#" id="add-programs-link">Управление пользователями</a>
+        <a href="control-drivers.php" id="add-drivers-link">Управление водителями</a>
         <a href="../" id="logout-link">На главную</a>
     </div>
 
     <div class="content" id="content-tariffs">
-        <!-- Контент для управления программами -->
+        <!-- Контент для управления пользователми -->
         <h2>Управление пользователями</h2>
 
     <section id="users-control">    
@@ -31,28 +34,34 @@
                 <th>Статус пользователя</th>
                 <th>Действие</th>
             </tr>
-            <?php
-            include("../connectDB.php");
-
-            $user_control = "SELECT * FROM `users`";
-            $user_result = mysqli_query($connect, $user_control);
-
-            if (mysqli_num_rows($user_result) > 0) {
-                while ($user = mysqli_fetch_assoc($user_result)) {
-                    echo "<tr>";
-                    echo "<td>" . $user['id'] . "</td>";
-                    echo "<td>" . $user['surname'] . "</td>";
-                    echo "<td>" . $user['name'] . "</td>";
-                    echo "<td>" . $user['phone'] . "</td>";
-                    echo "<td>" . $user['address'] . "</td>";
-                    echo "<td>" . $user['reg-time'] . "</td>";
-                    echo "<td>" . $user['status'] . "</td>";
-                    echo "<td><a href='block_user.php?user_id=" . $user['id'] . "' class='block'>Заблокировать</a></td>";
-                    echo "</tr>";
-                }
-            } else {
-                echo "<tr><td colspan='8'>Пользователи не найдены.</td></tr>";
-            }
+            <?php  
+                include("../connectDB.php");  
+                
+                $user_control = "SELECT * FROM users";  
+                $user_result = mysqli_query($connect, $user_control);  
+                
+                if (mysqli_num_rows($user_result) > 0) {  
+                    while ($user = mysqli_fetch_assoc($user_result)) {  
+                        echo "<tr>";  
+                        echo "<td>" . $user['id'] . "</td>";  
+                        echo "<td>" . $user['surname'] . "</td>";  
+                        echo "<td>" . $user['name'] . "</td>";  
+                        echo "<td>" . $user['phone'] . "</td>";  
+                        echo "<td>" . $user['address'] . "</td>";  
+                        echo "<td>" . $user['reg-time'] . "</td>";  
+                        echo "<td>" . $user['status'] . "</td>";  
+                
+                        if($user['status'] == 'заблокирован'){ 
+                            echo "<td><a href='block-users.php?user_id=" . $user['id'] . "' class='unblock'>Разблокировать</a></td>"; 
+                        } else { 
+                            echo "<td><a href='block-users.php?user_id=" . $user['id'] . "' class='block'>Заблокировать</a></td>"; 
+                        } 
+                        
+                        echo "</tr>";  
+                    }  
+                } else {  
+                    echo "<tr><td colspan='8'>Пользователи не найдены.</td></tr>";  
+                }  
             ?>
         </table>
     </section>

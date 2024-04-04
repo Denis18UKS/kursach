@@ -14,7 +14,7 @@ body h1{
     max-width: 400px;
     margin: 20px auto;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid goldenrod;
     border-radius: 5px;
 }
 
@@ -42,20 +42,22 @@ textarea {
 }
 
 button {
-    padding: 8px 15px;
+    padding: 15px 15px;
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    border: 1px solid;
+    
 }
-
 
 .sidebar {
     height: 100%;
     width: 200px;
     position: fixed;
     top: 0;
+    border-right: 1px solid;
     left: 0;
     background-color: #f0f0f0;
     padding-top: 20px;
@@ -73,7 +75,11 @@ button {
 }
 
 .active {
-    background-color: #ccc; /* Цвет для активной ссылки */
+    background-color: #cccccc5f; /* Цвет для активной ссылки */
+}
+
+.content{
+    display: contents;
 }
 
 .content h2{
@@ -86,6 +92,7 @@ button {
     flex-direction: column;
     padding: 1%;
     border: 5px solid black;
+
 }
 
 #control-tarifs{
@@ -94,6 +101,30 @@ button {
     justify-content: flex-end;
     gap: 15px;
     /* width: 100%; */
+}
+
+table {
+    border-collapse: collapse;
+    width: 40%;
+}
+th, td {
+    border: 1px solid goldenrod;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+#add-driver-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid goldenrod;
+    padding: 1%;
+    
 }
 
 .unblock{
@@ -116,7 +147,7 @@ button {
     /* border: 1px solid black; */
 }
 
-.remove{
+.remove, .delete{
     background: none;
     padding: 5px 15px;
     border-radius: 30px;
@@ -127,7 +158,7 @@ button {
     transition: all 0.6s ease-in-out;
 }
 
-.remove:hover{
+.remove:hover, .delete:hover{
     border-radius: 30px;
     padding: 5px 15px;
     color: #fff;
@@ -157,21 +188,8 @@ button {
 }
 
 #users-control,
-#tarifs-control{
+#tarifs-control,
+#drivers-control{
     display: flex;
     justify-content: center;
-}
-
-
-table {
-    border-collapse: collapse;
-    width: 40%;
-}
-th, td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: left;
-}
-th {
-    background-color: #f2f2f2;
 }
