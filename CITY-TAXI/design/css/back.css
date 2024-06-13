@@ -1,0 +1,36 @@
+@media (min-width: 1600px) {
+    #back {
+        margin: 2%;
+        width: 3%;
+        margin-top: 8%;
+        cursor: pointer;
+        position: absolute;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1599px) {
+    #back {
+        margin: 2%;
+        top: 0;
+        width: 3%;
+        cursor: pointer;
+        position: absolute;
+    }
+
+}
+
+@media (max-width: 767px) {
+    #back {
+        margin: 2%;
+        width: 3%;
+        top: 0;
+        cursor: pointer;
+        position: absolute;
+    }
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

@@ -1,0 +1,359 @@
+* {
+    transition: all 0.6s ease-in-out;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+}
+
+
+@media (min-width:1600px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        margin: 20px auto;
+        border-radius: 5px;
+        color: black;
+    }
+
+    .addresses-table {
+        border-collapse: collapse;
+    }
+
+    .addresses-table th,
+    .addresses-table td {
+        padding: 8px;
+        text-align: left;
+        border: 1px solid black;
+    }
+
+    .addresses-table tr:nth-child(even) {
+        background-color: goldenrod;
+    }
+
+    .addresses-table th {
+        background-color: goldenrod;
+        color: black;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    form button {
+        font-size: large;
+        border-radius: 15px;
+    }
+
+    #form-contents {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 30px;
+    }
+
+    label {
+        margin-bottom: 5px;
+    }
+
+    input {
+        margin-bottom: 10px;
+        padding: 5px;
+        border-radius: 3px;
+    }
+
+
+
+
+
+    .sidebar {
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        top: 0;
+        border-right: 8px solid goldenrod;
+        left: 0;
+        background-color: black;
+        color: gold;
+        padding-top: 20px;
+        font-weight: bolder;
+        font-size: larger;
+    }
+
+    .sidebar a {
+        margin: 0% auto;
+        display: block;
+        padding: 10px 15px;
+        text-decoration: none;
+        color: gold;
+    }
+
+    .sidebar a:hover {
+        background-color: gold;
+        color: black;
+    }
+
+    .active {
+        background-color: #cccccc5f;
+        /* Цвет для активной ссылки */
+    }
+
+    .content {
+        display: contents;
+    }
+
+    .content h2 {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+@media (min-width:768px) and (max-width:1599px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        margin: 20px auto;
+        border-radius: 5px;
+        color: black;
+    }
+
+    .addresses-table {
+        border-collapse: collapse;
+    }
+
+    .addresses-table th,
+    .addresses-table td {
+        padding: 8px;
+        text-align: left;
+        border: 1px solid black;
+    }
+
+    .addresses-table tr:nth-child(even) {
+        background-color: goldenrod;
+    }
+
+    .addresses-table th {
+        background-color: goldenrod;
+        color: black;
+    }
+
+    form {
+        display: flex;
+
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    form button {
+        font-size: large;
+        border-radius: 15px;
+    }
+
+    #form-contents {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        /* gap: 30px; */
+    }
+
+    label {
+        margin-bottom: 5px;
+    }
+
+    input {
+        margin-bottom: 10px;
+        padding: 5px;
+        border-radius: 3px;
+    }
+
+
+
+    .sidebar {
+        display: flex;
+        width: 100%;
+        top: 0;
+        border-bottom: 8px solid goldenrod;
+        left: 0;
+        background-color: black;
+        color: gold;
+        padding-top: 20px;
+        font-weight: bolder;
+        font-size: larger;
+    }
+
+    .sidebar a {
+        margin: 0% auto;
+        display: block;
+        padding: 10px 15px;
+        text-decoration: none;
+        color: gold;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .sidebar a:hover {
+        background-color: gold;
+        color: black;
+    }
+
+    .active {
+        background-color: #cccccc5f;
+        /* Цвет для активной ссылки */
+    }
+
+    .content {
+        display: contents;
+    }
+
+    .content h2 {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+@media (max-width:767px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 20px auto;
+        border-radius: 5px;
+        color: black;
+    }
+
+    .addresses-table {
+        border-collapse: collapse;
+    }
+
+    .addresses-table th,
+    .addresses-table td {
+        padding: 8px;
+        text-align: left;
+        border: 1px solid black;
+    }
+
+    .addresses-table tr:nth-child(even) {
+        background-color: goldenrod;
+    }
+
+    .addresses-table th {
+        background-color: goldenrod;
+        color: black;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    form button {
+        font-size: medium;
+        border-radius: 15px;
+    }
+
+    #form-contents {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    label {
+        margin-bottom: 5px;
+    }
+
+    input {
+        margin-bottom: 10px;
+        padding: 5px;
+        border-radius: 3px;
+    }
+
+
+
+
+
+    .sidebar {
+        display: flex;
+        width: 100%;
+        top: 0;
+        border-bottom: 8px solid goldenrod;
+        left: 0;
+        background-color: black;
+        color: gold;
+        padding-top: 20px;
+        font-weight: bolder;
+        font-size: larger;
+    }
+
+    .sidebar a {
+        margin: 0% auto;
+        display: block;
+        padding: 10px 15px;
+        text-decoration: none;
+        color: gold;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .sidebar a:hover {
+        background-color: gold;
+        color: black;
+    }
+
+    .active {
+        background-color: #cccccc5f;
+        /* Цвет для активной ссылки */
+    }
+
+    .content {
+        display: contents;
+    }
+
+    .content h2 {
+        text-align: center;
+    }
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 70%;
+}
+
+th,
+td {
+    border: 1px solid goldenrod;
+    padding: 8px;
+    text-align: left;
+}
+
+#modalId {
+    text-align: center;
+}

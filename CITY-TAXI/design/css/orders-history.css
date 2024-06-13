@@ -1,0 +1,125 @@
+* {
+    transition: all 0.6s ease-in-out;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    /* Для размещения боковой панели и контента */
+    background-color: gold;
+}
+
+
+@media (min-width: 1600px) {
+    table {
+        border-collapse: collapse;
+        margin-top: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        /* Тень для таблицы */
+    }
+
+    .table {
+        width: 50%;
+    }
+
+    th,
+    td {
+        text-align: left;
+        font-size: large;
+        padding: 12px;
+        color: black;
+        border-bottom: 1px solid black;
+    }
+
+    .table a {
+        background-color: #dc3545;
+        /* Красный цвет для кнопки отмены */
+        color: white;
+        font-size: large;
+        padding: 8px 12px;
+        border-radius: 5px;
+    }
+
+    .table a:hover {
+        background-color: #c82333;
+    }
+
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1599px) {
+    table {
+        border-collapse: collapse;
+        margin-top: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        /* Тень для таблицы */
+    }
+
+    .table {
+        width: 50%;
+    }
+
+    th,
+    td {
+        text-align: left;
+        padding: 12px;
+        color: black;
+        border-bottom: 1px solid black;
+    }
+
+    th {
+        background-color: goldenrod;
+    }
+
+    a.cancel-order {
+        background-color: #dc3545;
+        /* Красный цвет для кнопки отмены */
+        color: white;
+        padding: 8px 12px;
+        border-radius: 5px;
+    }
+
+    a.cancel-order:hover {
+        background-color: #c82333;
+    }
+}
+
+
+
+
+@media (max-width: 767px) {
+    table {
+        border-collapse: collapse;
+        margin-top: 20px;
+        font-size: xx-small;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        /* Тень для таблицы */
+    }
+
+    .table {
+        width: auto;
+    }
+
+    th,
+    td {
+        text-align: left;
+        padding: 8px;
+        color: black;
+        border: 1px solid black;
+    }
+
+    .table a {
+        background-color: #dc3545;
+        /* Красный цвет для кнопки отмены */
+        color: white;
+        font-size: xx-small;
+        padding: 6px 8px;
+        border-radius: 5px;
+    }
+
+    .table a:hover {
+        background-color: #c82333;
+    }
+
+}

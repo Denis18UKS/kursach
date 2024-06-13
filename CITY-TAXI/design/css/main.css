@@ -1,0 +1,685 @@
+* {
+    transition: all 0.6s ease-in-out;
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -ms-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@media (min-width:1600px) {
+    header {
+        box-shadow: gold 0px 0px 5px 20px inset;
+        background-image: url(/image/taxi.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 800px;
+        color: white;
+        font-weight: 900;
+        text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    }
+
+    #container-header-text {
+        background-color: gold;
+        box-shadow: inset 0px 0px 10px 8px goldenrod;
+        border: 5px solid goldenrod;
+        width: 50%;
+        padding: 1%;
+        text-align: center;
+        border-radius: 40px;
+        -webkit-border-radius: 40px;
+        -moz-border-radius: 40px;
+        -ms-border-radius: 40px;
+        -o-border-radius: 40px;
+    }
+}
+
+
+
+
+@media (min-width:768px) and (max-width: 1599px) {
+    header {
+        box-shadow: gold 0px 0px 5px 20px inset;
+        background-image: url(/image/taxi.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 800px;
+        color: white;
+        font-weight: 900;
+        text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    }
+
+    #container-header-text {
+        background-color: gold;
+        box-shadow: inset 0px 0px 10px 8px goldenrod;
+        border: 5px solid goldenrod;
+        width: 50%;
+        padding: 1%;
+        text-align: center;
+        border-radius: 40px;
+        -webkit-border-radius: 40px;
+        -moz-border-radius: 40px;
+        -ms-border-radius: 40px;
+        -o-border-radius: 40px;
+    }
+}
+
+
+
+@media (max-width: 767px) {
+    header {
+        box-shadow: gold 0px 0px 5px 10px inset;
+        background-color: gold;
+        font-size: smaller;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        color: white;
+        font-weight: 900;
+        text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    }
+
+    #container-header-text {
+        background-color: gold;
+        box-shadow: inset 0px 0px 8px 3px goldenrod;
+        border: 5px solid goldenrod;
+        padding: 1%;
+        margin: 1%;
+        text-align: center;
+        border-radius: 40px;
+        -webkit-border-radius: 40px;
+        -moz-border-radius: 40px;
+        -ms-border-radius: 40px;
+        -o-border-radius: 40px;
+    }
+}
+
+
+
+/* файл nav.css (стили для навигационной панели) подключается отдельно*/
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: gold;
+    height: 100%;
+    gap: 50px;
+}
+
+@media (min-width:1600px) {
+
+    #info-block {
+        padding: 2%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #info-block img {
+        box-shadow: 0px 0px 10px 7px goldenrod;
+        border-bottom: 5px solid gold;
+        border-radius: 340px;
+    }
+
+    #info-text {
+        font-size: xx-large;
+        font-family: cursive;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    #info-text h1 {
+        margin: 0% auto;
+        font-weight: 900;
+    }
+
+    #info-text h2 {
+        margin: 0% auto;
+    }
+
+    #info-text p {
+        margin: 0% auto;
+        width: 75%;
+    }
+}
+
+
+
+
+@media (min-width:768px) and (max-width:1599px) {
+    #info-block {
+        padding: 2%;
+        gap: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #info-block img {
+        width: 80%;
+        box-shadow: 0px 0px 10px 7px goldenrod;
+        border-bottom: 5px solid gold;
+        border-radius: 340px;
+    }
+
+    #info-text {
+        font-size: x-large;
+        font-family: cursive;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    #info-text h1 {
+        margin: 0% auto;
+        font-weight: 900;
+    }
+
+    #info-text h2 {
+        margin: 0% auto;
+    }
+
+    #info-text p {
+        margin: 0% auto;
+        width: 75%;
+    }
+}
+
+
+
+
+
+@media (max-width:767px) {
+    #info-block {
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #info-block img {
+        width: 50%;
+        box-shadow: 0px 0px 10px 7px goldenrod;
+        border-bottom: 5px solid gold;
+        border-radius: 340px;
+    }
+
+    #info-text {
+        font-size: medium;
+        font-family: cursive;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    #info-text h1 {
+        font-size: x-large;
+        margin: 0% auto;
+        font-weight: 900;
+    }
+
+    #info-text h2 {
+        font-size: larger;
+        margin: 0% auto;
+    }
+
+    #info-text p {
+        margin: 0% auto;
+        width: 75%;
+    }
+
+
+}
+
+
+
+
+
+@media (min-width:1600px) {
+    #tarifs-contents {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        max-width: 1100px;
+        /* Любое подходящее значение для вашего дизайна */
+        overflow-y: auto;
+        /* Добавление прокрутки при необходимости через колёсико мышки */
+        ;
+        /* Добавление прокрутки при необходимости */
+    }
+
+    #tarifs {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        padding: 20px;
+    }
+
+    .tarifs-container {
+        max-height: 800px;
+        /* Установим максимальную высоту области, чтобы вмещались все карточки */
+        overflow-y: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .tarifs {
+        margin: 0% auto;
+        font-weight: 900;
+        font-family: cursive;
+    }
+
+    #tarif-card {
+        display: flex;
+        flex-direction: column;
+        width: 20rem;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    #tarif-card h1,
+    p {
+        margin: 0%;
+    }
+
+    .card-img-top {
+        height: 220px;
+        border-radius: 50px;
+        box-shadow: 0px 0px 10px 10px goldenrod;
+        padding: 5px;
+    }
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: larger;
+        align-items: center;
+    }
+
+    .card-text-info {
+        font-size: larger;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin: 0% auto;
+    }
+
+    .price-and-btn-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        gap: 5px;
+    }
+
+    #price-and-btn-content h5 {
+        margin: 0%;
+        font-weight: 800;
+    }
+
+    .btn-primary {
+        background: #000;
+        padding: 5px 15px;
+        border-radius: 50px;
+        border: 1px solid #ffea8100;
+        text-decoration: none;
+        color: white;
+        font-weight: 800;
+        transition: all 0.6s ease-in-out;
+    }
+
+    .btn-primary:hover {
+        border: 10px solid #ffeb81;
+        border-bottom: 10px solid #d7be38;
+        border-top: 10px solid #d7be38;
+        box-shadow: 0px 0px 10px 1px darkgoldenrod;
+        background: #000;
+        color: gold;
+        cursor: pointer;
+    }
+}
+
+@media (min-width:768px) and (max-width: 1599px) {
+    #tarifs-contents {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        max-width: 1100px;
+        /* Любое подходящее значение для вашего дизайна */
+        overflow-y: auto;
+        /* Добавление прокрутки при необходимости через колёсико мышки */
+        ;
+        /* Добавление прокрутки при необходимости */
+    }
+
+    #tarifs {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        padding: 20px;
+    }
+
+    .tarifs-container {
+        max-height: 800px;
+        /* Установим максимальную высоту области, чтобы вмещались все карточки */
+        overflow-y: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .tarifs {
+        margin: 0% auto;
+        font-weight: 900;
+        font-family: cursive;
+    }
+
+    #tarif-card {
+        display: flex;
+        flex-direction: column;
+        width: 20rem;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    #tarif-card h1,
+    p {
+        margin: 0%;
+    }
+
+    .card-img-top {
+        height: 220px;
+        border-radius: 50px;
+        box-shadow: 0px 0px 10px 10px goldenrod;
+        padding: 5px;
+    }
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: medium;
+        align-items: center;
+    }
+
+    .card-text-info {
+        font-size: larger;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin: 0% auto;
+    }
+
+    .price-and-btn-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        gap: 5px;
+    }
+
+    #price-and-btn-content h5 {
+        margin: 0%;
+        font-weight: 800;
+    }
+
+    .btn-primary {
+        background: #000;
+        padding: 5px 15px;
+        border-radius: 50px;
+        border: 1px solid #ffea8100;
+        text-decoration: none;
+        color: white;
+        font-weight: 800;
+        transition: all 0.6s ease-in-out;
+    }
+
+    .btn-primary:hover {
+        border: 10px solid #ffeb81;
+        border-bottom: 10px solid #d7be38;
+        border-top: 10px solid #d7be38;
+        box-shadow: 0px 0px 10px 1px darkgoldenrod;
+        background: #000;
+        color: gold;
+        cursor: pointer;
+    }
+}
+
+
+
+@media (max-width:767px) {
+    #tarifs-contents {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    #tarifs {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        padding: 20px;
+    }
+
+    .tarifs-container {
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        gap: 10px;
+    }
+
+    .tarifs {
+        margin: 0% auto;
+        font-weight: 900;
+        font-family: cursive;
+    }
+
+    #tarif-card {
+        display: flex;
+        flex-direction: column;
+        width: 20rem;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    #tarif-card h1 {
+        margin: 0%;
+        font-size: x-large;
+    }
+
+    .card-img-top {
+        border-radius: 50px;
+        box-shadow: 0px 0px 10px 10px goldenrod;
+        padding: 5px;
+    }
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: medium;
+        align-items: center;
+    }
+
+    .card-text-info {
+        font-size: medium;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin: 0% auto;
+    }
+
+    .price-and-btn-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5px;
+    }
+
+    #price-and-btn-content h5 {
+        margin: 0%;
+        font-weight: 800;
+    }
+
+    .btn-primary {
+        font-size: small;
+        background: #000;
+        padding: 5px 15px;
+        border-radius: 50px;
+        border: 1px solid #ffea8100;
+        text-decoration: none;
+        color: white;
+        font-weight: 800;
+        transition: all 0.6s ease-in-out;
+    }
+
+    .btn-primary:hover {
+        border: 10px solid #ffeb81;
+        border-bottom: 10px solid #d7be38;
+        border-top: 10px solid #d7be38;
+        box-shadow: 0px 0px 10px 1px darkgoldenrod;
+        background: #000;
+        color: gold;
+        cursor: pointer;
+    }
+}
+
+
+
+
+@media (min-width: 1600px) {
+    iframe {
+        width: 1440px;
+        height: 1080px;
+    }
+
+    #video {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        margin-bottom: 100px;
+    }
+
+    #video h1 {
+        margin: 0% auto;
+    }
+
+    footer {
+        box-shadow: 0px 0px 10px 1px goldenrod;
+        padding: 1%;
+        color: gold;
+        background-color: black;
+    }
+
+    #ftr-contents {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1599px) {
+    iframe {
+        width: 800px;
+        height: 600px;
+    }
+
+    #video {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        margin-bottom: 100px;
+    }
+
+    #video h1 {
+        margin: 0% auto;
+    }
+
+    footer {
+        box-shadow: 0px 0px 10px 1px goldenrod;
+        padding: 1%;
+        color: gold;
+        background-color: black;
+    }
+
+    #ftr-contents {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+
+@media (max-width: 767px) {
+    iframe {
+        width: 600px;
+        height: 400px;
+    }
+
+    #video {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        margin-bottom: 100px;
+    }
+
+    #video h1 {
+        margin: 0% auto;
+    }
+
+    footer {
+        box-shadow: 0px 0px 10px 1px goldenrod;
+        padding: 1%;
+        color: gold;
+        background-color: black;
+    }
+
+    #ftr-contents {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

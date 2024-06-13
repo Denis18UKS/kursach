@@ -1,0 +1,240 @@
+/* Общие стили */
+body {
+    background-color: gold;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    transition: all 0.6s ease-in-out;
+    font-size: large;
+}
+
+h2 {
+    color: #333;
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin: 10px;
+}
+
+#status {
+    margin-top: 20px;
+    color: #333;
+}
+
+@media (min-width: 1600px) {
+    .orders-section {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .orders-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .orders-table th,
+    .orders-table td {
+        text-align: left;
+        padding: 8px;
+        border: 1px solid black;
+    }
+
+    .orders-table tr:nth-child(even) {
+        background-color: goldenrod;
+    }
+
+    .orders-table th {
+        background-color: goldenrod;
+        color: black;
+        text-align: center;
+    }
+
+    .accept-order-btn,
+    .reject-order-btn {
+        display: flex;
+        flex-direction: column;
+        padding: 5px 15px;
+        font-size: 1rem;
+        border-radius: 25px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+    }
+
+    .accept-order-btn {
+        background-color: #28a745;
+        color: black;
+        font-weight: 900;
+        margin-bottom: 6px;
+    }
+
+    .accept-order-btn:hover {
+        background-color: #218838;
+    }
+
+    .reject-order-btn {
+        background-color: #dc3545;
+        color: black;
+        font-weight: 900;
+    }
+
+    .reject-order-btn:hover {
+        background-color: #c82333;
+    }
+}
+
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 1599px) {
+    .orders-section {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .orders-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .orders-table th,
+    .orders-table td {
+        text-align: left;
+        padding: 8px;
+        border: 1px solid black;
+    }
+
+    .orders-table tr:nth-child(even) {
+        background-color: goldenrod;
+    }
+
+    .orders-table th {
+        background-color: goldenrod;
+        color: black;
+        text-align: center;
+    }
+
+    .accept-order-btn,
+    .reject-order-btn {
+        display: flex;
+        flex-direction: column;
+        padding: 5px 15px;
+        font-size: 1rem;
+        border-radius: 25px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+    }
+
+    .accept-order-btn {
+        background-color: #28a745;
+        color: black;
+        font-weight: 900;
+        margin-bottom: 6px;
+    }
+
+    .accept-order-btn:hover {
+        background-color: #218838;
+    }
+
+    .reject-order-btn {
+        background-color: #dc3545;
+        color: black;
+        font-weight: 900;
+    }
+
+    .reject-order-btn:hover {
+        background-color: #c82333;
+    }
+}
+
+
+
+
+@media (max-width: 767px) {
+    .orders-section {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .orders-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .orders-table th,
+    .orders-table td {
+        text-align: left;
+        padding: 8px;
+        border: 1px solid black;
+    }
+
+    .orders-table tr:nth-child(even) {
+        background-color: goldenrod;
+    }
+
+    .orders-table th {
+        background-color: goldenrod;
+        color: black;
+        text-align: center;
+    }
+
+    .accept-order-btn,
+    .reject-order-btn {
+        display: flex;
+        flex-direction: column;
+        padding: 5px 15px;
+        font-size: 1rem;
+        border-radius: 25px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+    }
+
+    .accept-order-btn {
+        background-color: #28a745;
+        color: black;
+        font-weight: 900;
+        margin-bottom: 6px;
+    }
+
+    .accept-order-btn:hover {
+        background-color: #218838;
+    }
+
+    .reject-order-btn {
+        background-color: #dc3545;
+        color: black;
+        font-weight: 900;
+    }
+
+    .reject-order-btn:hover {
+        background-color: #c82333;
+    }
+}

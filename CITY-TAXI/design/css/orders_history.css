@@ -1,0 +1,159 @@
+* {
+    transition: all 0.6s ease-in-out;
+}
+
+body {
+    background-color: gold;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.active {
+    background-color: #cccccc5f;
+    /* Цвет для активной ссылки */
+}
+
+.content {
+    flex-grow: 1;
+    /* Контент занимает оставшееся пространство */
+    padding: 20px;
+}
+
+@media (min-width:1600px) {
+    table {
+        border-collapse: collapse;
+        margin-top: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        /* Тень для таблицы */
+    }
+
+    .table {
+        width: auto;
+    }
+
+    th,
+    td {
+        text-align: left;
+        padding: 12px;
+        border: 1px solid goldenrod;
+    }
+
+    th {
+        background-color: gold;
+        /* Цвет заголовка */
+    }
+
+    tr:nth-child(even) {
+        background-color: goldenrod;
+        /* Чередование фона строк */
+    }
+
+    a.cancel-order {
+        background-color: #dc3545;
+        /* Красный цвет для кнопки отмены */
+        color: white;
+        padding: 8px 12px;
+        border-radius: 5px;
+    }
+
+    a.cancel-order:hover {
+        background-color: #c82333;
+    }
+}
+
+
+
+
+
+
+@media (min-width:768px) and (max-width:1599px) {
+    table {
+        border-collapse: collapse;
+        margin-top: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        /* Тень для таблицы */
+    }
+
+    .table {
+        width: auto;
+    }
+
+    th,
+    td {
+        text-align: left;
+        padding: 12px;
+        border: 1px solid goldenrod;
+    }
+
+    th {
+        background-color: gold;
+        /* Цвет заголовка */
+    }
+
+    tr:nth-child(even) {
+        background-color: goldenrod;
+        /* Чередование фона строк */
+    }
+
+    a.cancel-order {
+        background-color: #dc3545;
+        /* Красный цвет для кнопки отмены */
+        color: white;
+        padding: 8px 12px;
+        border-radius: 5px;
+    }
+
+    a.cancel-order:hover {
+        background-color: #c82333;
+    }
+}
+
+
+
+
+
+@media (max-width: 767px) {
+    table {
+        border-collapse: collapse;
+        margin-top: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        /* Тень для таблицы */
+    }
+
+    .table {
+        width: 100%;
+    }
+
+    th,
+    td {
+        font-size: medium;
+        text-align: left;
+        padding: 12px;
+        border: 1px solid goldenrod;
+    }
+
+    th {
+        background-color: gold;
+        /* Цвет заголовка */
+    }
+
+    tr:nth-child(even) {
+        background-color: goldenrod;
+        /* Чередование фона строк */
+    }
+
+    a.cancel-order {
+        background-color: #dc3545;
+        /* Красный цвет для кнопки отмены */
+        color: white;
+        padding: 8px 12px;
+        border-radius: 5px;
+    }
+
+    a.cancel-order:hover {
+        background-color: #c82333;
+    }
+}

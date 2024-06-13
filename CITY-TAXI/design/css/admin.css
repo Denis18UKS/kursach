@@ -1,0 +1,430 @@
+/* Общие стили */
+* {
+    transition: all 0.6s ease-in-out;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+body h1 {
+    text-align: center;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Стили для контейнера форм */
+.form-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid goldenrod;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Тень для контейнера формы */
+}
+
+/* Стилизация кнопок */
+form button {
+    font-size: large;
+    border-radius: 15px;
+    cursor: pointer;
+    /* Изменение курсора при наведении */
+}
+
+form button:hover {
+    font-size: x-large;
+    opacity: 0.8;
+    /* Понижение прозрачности при наведении */
+}
+
+/* Стилизация меток и полей ввода */
+label {
+    margin-bottom: 5px;
+    display: block;
+    /* Отображение меток блочно */
+}
+
+input,
+textarea {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    /* Добавление границы */
+    outline: none;
+    /* Убираем стандартное выделение */
+}
+
+textarea {
+    resize: vertical;
+    /* Ограничение изменения размера только по вертикали */
+}
+
+/* Стилизация боковой панели */
+@media (min-width:1600px) {
+
+
+    .sidebar {
+        height: 100vh;
+        /* Высота до нижней границы экрана */
+        width: 200px;
+        position: fixed;
+        top: 0;
+        border-right: 6px solid goldenrod;
+        left: 0;
+        background-color: black;
+        padding-top: 20px;
+        overflow-y: auto;
+        font-size: larger;
+        font-weight: 700;
+        /* Скроллинг внутри боковой панели */
+    }
+
+    .sidebar a {
+        margin: 0% auto;
+        display: block;
+        padding: 10px 15px;
+        text-decoration: none;
+        color: gold;
+    }
+
+    .sidebar a:hover {
+        color: black;
+        background-color: gold
+    }
+
+    /* Активная ссылка в боковой панели */
+    .sidebar.active {
+        background-color: #cccccc5f;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1599px) {
+    .sidebar {
+        display: flex;
+        width: 100%;
+        top: 0;
+        border-bottom: 8px solid goldenrod;
+        left: 0;
+        background-color: black;
+        color: gold;
+        padding-top: 20px;
+        font-weight: bolder;
+        font-size: larger;
+    }
+
+    .sidebar a {
+        margin: 0% auto;
+        display: block;
+        padding: 10px 15px;
+        text-decoration: none;
+        color: gold;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .sidebar a:hover {
+        background-color: gold;
+        color: black;
+    }
+
+    .active {
+        background-color: #cccccc5f;
+        /* Цвет для активной ссылки */
+    }
+}
+
+
+
+@media (max-width:767px) {
+    .sidebar {
+        display: flex;
+        width: 100%;
+        top: 0;
+        border-bottom: 8px solid goldenrod;
+        left: 0;
+        background-color: black;
+        color: gold;
+        padding-top: 20px;
+        font-weight: bolder;
+        font-size: smaller;
+    }
+
+    .sidebar a {
+        margin: 0% auto;
+        display: block;
+        padding: 10px 15px;
+        text-decoration: none;
+        color: gold;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .sidebar a:hover {
+        background-color: gold;
+        color: black;
+    }
+
+    .active {
+        background-color: gold;
+        /* Цвет для активной ссылки */
+    }
+}
+
+
+/* Стилизация основного контента */
+@media (min-width: 1600px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding: 20px;
+        margin-left: 220px;
+        /* Смещение для боковой панели */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1599px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding: 20px;
+        /* Смещение для боковой панели */
+    }
+}
+
+@media (max-width: 767px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding: 20px;
+        /* Смещение для боковой панели */
+    }
+}
+
+
+.content h2 {
+    text-align: center;
+}
+
+/* Стилизация таблицы */
+#tarifs-control table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid goldenrod;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: goldenrod;
+}
+
+/* Стилизация кнопок действий */
+.unblock,
+.restore,
+.remove,
+.delete,
+.block {
+    background: none;
+    padding: 5px 15px;
+    border-radius: 30px;
+    color: inherit;
+    /* Использование цвета текста вместо жесткого заданного */
+    text-decoration: none;
+    font-weight: 800;
+    border: 1px solid transparent;
+    /* Граница становится прозрачной */
+    transition: all 0.6s ease-in-out;
+}
+
+.unblock:hover,
+.restore:hover,
+.remove:hover,
+.delete:hover,
+.block:hover {
+    color: black;
+    background: inherit;
+    /* Задаем фон равным цвету текста */
+    border-color: inherit;
+    /* Задаем цвет границы равным цвету текста */
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+    /* Добавляем тень */
+}
+
+/* Стилизация блокировки и разблокировки */
+.block,
+.unblock {
+    color: red;
+}
+
+.restore {
+    color: green;
+}
+
+/* Стилизация удаления */
+.remove,
+.delete {
+    color: red;
+}
+
+/* Центрирование элементов */
+#users-control,
+#tarifs-control,
+#drivers-control,
+#cars-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding-top: 50px
+}
+
+/* Стилизация модального окна "Добавить тариф" */
+
+#exampleModal.modal-header {
+    background-color: #007bff;
+    /* Цвет фона заголовка */
+    color: white;
+    /* Белый цвет текста */
+}
+
+#exampleModal.modal-title {
+    color: white;
+    /* Белый цвет заголовка */
+}
+
+#exampleModal.btn-close {
+    color: white;
+    /* Белый цвет кнопки закрытия */
+}
+
+#exampleModal.modal-body form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Отступы между полями формы */
+}
+
+#exampleModal.form-control {
+    border-radius: 5px;
+    /* Радиус границы полей ввода */
+    border: 1px solid #ced4da;
+    /* Граница полей ввода */
+}
+
+#exampleModal.form-control:focus {
+    border-color: #80bdff;
+    /* Цвет границы при фокусе */
+    outline: 0;
+    /* Убираем стандартное выделение */
+}
+
+#exampleModal.btn-success {
+    background-color: #28a745;
+    /* Зеленый фон кнопки */
+    border-color: #28a745;
+    /* Зеленый цвет границы */
+    color: white;
+    /* Белый цвет текста */
+}
+
+
+/* cars-control.css */
+#cars-control table {
+    width: 100%;
+    /* Ширина таблицы */
+    border-collapse: collapse;
+    /* Коллапсирующая граница */
+}
+
+#tarifs-control th,
+#tarifs-control td,
+#users-control th,
+#users-control td,
+#drivers-control th,
+#drivers-control td,
+#cars-control th,
+#cars-control td {
+    border: 1px solid black;
+    /* Границы ячеек таблицы */
+    padding: 8px;
+    /* Отступы внутри ячеек */
+    text-align: left;
+    /* Выравнивание текста по левому краю */
+}
+
+#cars-control th {
+    background-color: goldenrod;
+    /* Темный фон для заголовков таблицы */
+    color: black;
+    /* Белый цвет текста заголовков */
+}
+
+/* Стилизация модального окна */
+.modal-content {
+    background-color: #ffffff;
+    /* Белый фон модального окна */
+    border: 1px solid #dee2e6;
+    /* Граница модального окна */
+    border-radius: 5px;
+    /* Круглые углы */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Тень под модальным окном */
+}
+
+.modal-header {
+    background-color: black;
+    /* Синий фон заголовка модального окна */
+    color: gold;
+    /* Белый цвет текста заголовка */
+}
+
+.modal-body {
+    padding: 15px;
+    /* Отступы внутри тела модального окна */
+}
+
+.modal-footer {
+    background-color: black;
+    /* Светло-серый фон подвала модального окна */
+    border-top: 1px solid gold;
+    /* Верхняя граница подвала */
+}
+
+/* Стилизация кнопок в модальном окне */
+.modal-footer button {
+    background-color: #007bff;
+    /* Синий фон кнопки */
+    color: white;
+    /* Белый цвет текста кнопки */
+    border: none;
+    /* Убираем границу кнопки */
+    padding: 10px 20px;
+    /* Отступы внутри кнопки */
+    border-radius: 5px;
+    /* Круглые углы кнопки */
+    cursor: pointer;
+    /* Изменяем курсор на указатель при наведении */
+}
+
+.modal-footer button:hover {
+    background-color: #0056b3;
+    /* Темнеший синий фон при наведении */
+}

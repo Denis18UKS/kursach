@@ -1,0 +1,159 @@
+/* Общие стили */
+* {
+    transition: all 0.6s ease-in-out;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    background-color: #f5f5f5; /* Добавляем светло-серый фон */
+}
+
+body h1 {
+    text-align: center;
+    color: #333; /* Уточнение цвета текста */
+}
+
+/* Стилизация контейнера форм */
+.form-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid goldenrod;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Добавляем тень под контейнер */
+}
+
+/* Стилизация кнопок */
+form button {
+    font-size: large;
+    border-radius: 15px;
+    padding: 10px 15px; /* Увеличение внутренних отступов */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Добавляем плавную смену цвета фона */
+}
+
+form button:hover {
+    background-color: #0056b3; /* Темнесть цвета фона при наведении */
+}
+
+/* Стилизация меток и полей ввода */
+label {
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold; /* Жирный текст для меток */
+}
+
+input, textarea {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc; /* Добавляем серую границу */
+}
+
+textarea {
+    resize: vertical; /* Ограничиваем растягивание только по вертикали */
+}
+
+/* Стилизация боковой панели */
+.sidebar {
+    height: 100vh;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    border-right: 1px solid #ccc; /* Серая граница */
+    left: 0;
+    background-color: #f0f0f0;
+    padding-top: 20px;
+    overflow-y: auto; /* Позволяем скроллинг внутри боковой панели */
+}
+
+.sidebar a {
+    margin: 0% auto;
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar a:hover {
+    background-color: #ddd; /* Серый фон при наведении */
+}
+
+/* Стилизация активной ссылки */
+.active {
+    background-color: #cccccc5f;
+}
+
+/* Стилизация основного контента */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 20px;
+    margin-left: 220px; /* Смещение для боковой панели */
+}
+
+.content h2 {
+    text-align: center;
+    color: #333; /* Уточнение цвета текста */
+}
+
+/* Стилизация таблицы */
+#tarifs-control table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid goldenrod;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Стилизация кнопок действий */
+.restore,.block {
+    background: none;
+    padding: 5px 15px;
+    border-radius: 30px;
+    color: inherit; /* Используем наследуемые цвета */
+    text-decoration: none;
+    font-weight: 800;
+    border: 1px solid transparent; /* Граница становится прозрачной */
+    transition: all 0.6s ease-in-out;
+}
+
+.restore:hover,.block:hover {
+    color: #fff;
+    background: inherit; /* Задаем фон равным цвету текста */
+    border-color: inherit; /* Задаем цвет границы равным цвету текста */
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2); /* Добавляем тень */
+}
+
+/* Стилизация кнопок восстановления и блокировки */
+.restore {
+    color: green;
+}
+
+.block {
+    color: red;
+}
+
+/* Центрирование элементов */
+#cars-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
